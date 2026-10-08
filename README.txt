@@ -1,17 +1,9 @@
-MY FITNESS — FREE PERSONAL TRACKER
+MY FITNESS V2
 
-Weight entries, weight chart, exercise logs (sets/reps/load), history, editing and deletion. Kilograms. No accounts, server database, sync, backup, analytics, or external dependencies. Entries live in IndexedDB on the device/browser you use. Nothing uploads your fitness records.
+Dark interface, Today/Progress/History, set-by-set workouts, local active workout drafts, saved routines, previous workout values, weight charts and highest-load personal bests. No account or cloud storage.
 
-PUBLISH FOR FREE ON GITHUB PAGES
-1. Sign in to GitHub and create a public repository called my-fitness.
-2. Extract this ZIP. Upload the files INSIDE fitness-app to the repository root (index.html must be at the root).
-3. Open repository Settings > Pages. Choose Deploy from a branch, main, / (root), then Save.
-4. Wait for GitHub to display the published link. Open it in Safari on your iPhone.
-5. Use Share > Add to Home Screen. Open the app from that icon, and use that version consistently.
-6. Keep it online once initially so the offline files can finish caching.
+Upgrade: Upload all files from fitness-app into the root of the existing GitHub repository and commit. Keep the same URL. Close and reopen the app online; if the older design remains, reload once more after the new service worker installs. Do not clear website data: your records are retained in the existing my-fitness database.
 
-The source code and app URL are public; fitness records remain on each visitor's device. Clearing site data removes records. Different browsers/devices can have separate records. No backup is included, as requested.
+Earlier weight and exercise records are preserved. Earlier exercise entries can be viewed and deleted; weights and new workouts can also be edited. Unchecked sets are excluded when finishing a workout. Each routine retains its saved starting values.
 
-To update cached app files, change the CACHE version in sw.js before uploading changed files. No paid domain or App Store account is needed.
-
-Validation: JavaScript syntax checked. iPhone installation and offline operation still require testing on the hosted HTTPS URL.
+Validation: syntax checks and simulated storage/interaction checks passed for legacy retention, draft persistence, routine reuse, completed-set filtering, previous values and input validation. Physical iPhone testing remains necessary.
